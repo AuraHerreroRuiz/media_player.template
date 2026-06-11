@@ -207,7 +207,7 @@ async def _async_create_entities(hass, config):
         current_sound_mode_template = device_config.get(CURRENT_SOUND_MODE_TEMPLATE)
 
         media_players.append(
-            MediaPlayerTemplateDaxi(
+            MediaPlayerTemplate(
                 hass,
                 device,
                 friendly_name,
@@ -255,7 +255,7 @@ async def _async_create_entities(hass, config):
     return media_players
 
 
-class MediaPlayerTemplateDaxi(TemplateEntity, MediaPlayerEntity):
+class MediaPlayerTemplate(TemplateEntity, MediaPlayerEntity):
     """Representation of a Template Media player."""
 
     def __init__(
